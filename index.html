@@ -1,14 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400i,600,700,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/main.css" />
+	<title>MyCompany</title>
+	<link href="css/main.css" rel="stylesheet"/>
 </head>
 <body>
-	<header class="hdr">
-		<div class="">mycompany</div>
+	<header class="block block-black header">
+		<div class="content">
+			<div class="header__logo"><p>mycompany</p></div>
+			<nav class="header__topnav" id="myTopnav">
+					<a href="#welcome" id="link">home</a>
+					<a href="#about">about</a>
+					<a href="#team">team</a>
+					<a href="#services">services</a>
+					<a href="#clients">clients</a>
+					<a href="#portfolio">portfolio</a>
+					<a href="#testim">testimonials</a>
+					<a href="#contact">contact</a>
+					<a href="#" class="topnav__burger" id="menu">&#9776;</a>
+			</nav>
+		</div>
 	</header>
+	<main>
+		<section class="block block-black welcome" id="welcome">
+			<div class="content">
+				<h1>WELCOME ON <span class="mycompany">MYCOMPANY</span></h1>
+				<p><span>We are a digital agency with</span> years of experience <span>and with</span> extraordinary people</p>
+			</div>
+		</section>
+		<section class="block block-white about" id="about">
+			<div class="content">
+				<div class="about__left">
+					<img src="img/mac.png" alt="mac">
+				</div>
+				<div class="about__right">
+					<div class="about__right-text">
+						<div class="title title-about"><span class="text-lite">Some words </span><span class="no-wrap">about us</span></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus .</p>
+						<ul class="about__ul">
+							<li>
+								<div><span>Mission - </span>We deliver uniqueness and quality</div>
+							</li>
+							<li><div><span>Skills - </span>Delivering fast and excellent results</div></li>
+							<li><div><span>Clients - </span>Satisfied clients thanks to our experience</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="block block-black team" id="team">
+			<div class="content">
+				<div class="title">our team</div>
+				<div class="items">
+					<div class="wrapper">
+						<div class="item">
+							<img src="img/des.jpg" alt="foto">
+							<h4 class="item__title">Vlad Ivanov</h4>
+							<p class="item__subtitle">Designer</p>
+							<p class="item__text">Do not seek to change what has come before. Seek to create that which has not</p>
+						</div>
+						<div class="item">
+							<img src="img/men.jpg" alt="foto">
+							<h4 class="item__title">Bogdan Makarov</h4>
+							<p class="item__subtitle">Manager</p>
+							<p class="item__text">Do not seek to change what has come before. Seek to create that which has not</p>
+						</div>
+					</div>
+					<div class="wrapper">
+						<div class="item">
+							<img src="img/cop.jpg" alt="foto">
+							<h4 class="item__title">Pavel Konov</h4>
+							<p class="item__subtitle">Copywriter</p>
+							<p class="item__text">Do not seek to change what has come before. Seek to create that which has not</p>
+						</div>
+						<div class="item">
+							<img src="img/SEO.jpg" alt="foto">
+							<h4 class="item__title">Max Belov</h4>
+							<p class="item__subtitle">SEO</p>
+							<p class="item__text">Do not seek to change what has come before. Seek to create that which has not</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="block block-white services" id="services">
+			<div class="content">
+				<div class="title">our services</div>
+				<div class="noname-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.</p>
+				</div>
+				<div class="items">
+					<div class="wrapper">
+						<div class="item">
+							<img src="img/web_des.svg" alt="icon">
+							<h4 class="item__title">Web design</h4>
+							<p class="item__subtitle">Designer</p>
+							<p class="item__text">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+						</div>
+						<div class="item">
+							<img src="img/mob_app.svg" alt="icon">
+							<h4 class="item__title">Mobile apps</h4>
+							<p class="item__subtitle">Manager</p>
+							<p class="item__text">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+						</div>
+					</div>
+					<div class="wrapper">
+						<div class="item">
+							<img src="img/photogr.svg" alt="icon">
+							<h4 class="item__title">PHOTOGRAPHY</h4>
+							<p class="item__subtitle">Copywriter</p>
+							<p class="item__text">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+						</div>
+						<div class="item">
+							<img src="img/market.svg" alt="icon">
+							<h4 class="item__title">marketing</h4>
+							<p class="item__subtitle">SEO</p>
+							<p class="item__text">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="block block-black clients" id="clients">
+			<div class="content">
+				<div class="title"><span class="text-lite">some of </span><span class="no-wrap">our clients</span></div>
+				<div class="logos">
+					<img src="/img/Layer 69.png" alt="logo">
+					<img src="/img/Layer 65.png" alt="logo">
+					<img src="/img/Layer 68.png" alt="logo">
+					<img src="/img/Layer 67.png" alt="logo">
+					<img src="/img/Layer 64.png" alt="logo">
+				</div>
+			</div>
+		</section>
+		<section class="block block-white portfolio" id="portfolio">
+			<div class="content">
+				<div class="title"><span class="text-lite">take a look at </span><span class="no-wrap">our work</span></div>
+				<div class="noname-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.</p>
+				</div>
+				<div class="items">
+					<div class="work"><img src="/img/item4.png" alt="itms"></div>
+					<div class="work"><img src="/img/item4.png" alt="itms"></div>
+					<div class="work"><img src="/img/item4.png" alt="itms"></div>
+					<div class="work"><img src="/img/item4.png" alt="itms"></div>
+					<div class="work"><img src="/img/item1.png" alt="itms"></div>
+					<div class="work"><img src="/img/item1.png" alt="itms"></div>
+					<div class="work"><img src="/img/item1.png" alt="itms"></div>
+					<div class="work"><img src="/img/item1.png" alt="itms"></div>
+					<div class="work"><img src="/img/item3.png" alt="itms"></div>
+					<div class="work"><img src="/img/item3.png" alt="itms"></div>
+					<div class="work"><img src="/img/item3.png" alt="itms"></div>
+					<div class="work"><img src="/img/item3.png" alt="itms"></div>
+				</div>
+			</div>
+		</section>
+		<section class="block block-black testim" id="testim">
+			<div class="content">
+				<div class="title">our clients’ <span class="text-lite">testimonials</span></div>
+				<div class="testim-text">
+					<blockquote class="quote">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</blockquote>
+					<cite class="signature">Dean Martin, <span class="text-lite">CEO Acme Inc.</span></cite>
+				</div>
+			</div>
+		</section>
+		<section class="block block-white contact" id="contact">
+			<div class="content">
+				<div class="title">contact us	</div>
+				<div class="noname-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+				</div>
+				<form action="#" method="post">
+					<div class="flex">
+						<div>
+							<p class="text-form">Name *</p>
+							<input type="text" name="Name" value="">
+						</div>
+						<div>
+							<p class="text-form">Email address *</p>
+							<input type="text" name="email" value="">
+						</div>
+					</div>
+					<div class="message">
+						<p class="text-form">Message *</p>
+						<textarea name="message"></textarea>
+					</div>
+					<div class="btn">
+						<button type="submit">Send</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="footer block">
+			<div class="content">
+				<div>
+					<a href="https://www.facebook.com/"><img src="/img/facebook.png" alt="facebook"></a>
+				</div>
+				<div>
+					<a href="https://twitter.com/home"><img src="/img/twitter.png" alt="twitter"></a>
+				</div>
+				<div>
+					<a href="https://plus.google.com/"><img src="/img/google.png" alt="google+"></a>
+				</div>
+				<div>
+					<a href="https://www.linkedin.com/"><img src="/img/linkedin.png" alt="linkedin"></a>
+				</div>
+				<div>
+					<a href="https://dribbble.com/"><img src="/img/dribbble.png" alt="dribbble"></a>
+				</div>
+			</div>
+	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
