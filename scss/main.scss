@@ -10,7 +10,7 @@ body{
 	width: 100%;
 	max-width: 1500px;
 	margin: 0 auto;
-	overflow: hidden;
+	overflow-x: hidden;
 	&-black{
 		background: black;
 		color: white;
@@ -106,7 +106,7 @@ body{
 //------------------------------------------------------
 .header{
 	position: fixed;
-	background: black;
+	top: 0px;
 	padding: 52px 0 5px 0;
 	color: #fff;
 	.content{
@@ -137,9 +137,9 @@ body{
 				border-bottom: 3px solid $YG;
 			}
 		}
-		.topnav__burger {
-			display: none;
-		}
+	}
+	&__burger {
+		display: none;
 	}
 }
 main{
@@ -159,9 +159,6 @@ main{
 				font-weight: 700;
 				color: $YG;
 			}
-		}
-		span{
-			font-weight: 300;
 		}
 	}
 }
@@ -248,7 +245,7 @@ main{
 	}
 }
 .clients{
-	padding: 93px 13% 160px;
+	padding: 93px 0 160px;
 	.logos{
 		max-width: 1000px;
 		margin: 0 auto;
@@ -275,7 +272,9 @@ main{
 		max-width: 100%;
 		justify-content: center;
 		.work{
-			padding: 11px 11px;
+			flex: 1 0 25%;
+			min-width: 250px;
+			padding: 10px 10px;
 			img{
 				width: 100%;
 			}
@@ -404,45 +403,62 @@ main{
 }
 @media screen and(max-width: 799px){
 	.header{
+		overflow: visible;
 		&__topnav{
-			padding: 0;
-			a{
-				display: none;
-			}
-			.topnav__burger {
-				display: block;
-				font-size: 24px;
-			}
+			display: none;
+		}
+		&__burger {
+			display: block;
+			font-size: 24px;
 		}
 		&__topnav-responsive{
+			position: absolute;
+			display: flex;
 			flex-direction: column;
-			align-items: flex-end;
-			width: 100%;
-			position: relative;
-			padding: 2px 30px;
+			align-items: center;
+			left: 0;
+			top: 80px;
+			background-color: black;
+			opacity: 0.8;
+			padding-top: 30px;
+			font-size: 20px;
 			a{
-				display: block;
+				margin: 10px 0;
+				padding-bottom: 11px;
 				&:hover{
-					border-bottom: 3px solid $YG;
+					border-bottom: 0;
 				}
 			}
-			.topnav__burger {
-				position: absolute;
+			&__burger {
 				top: 0;
 				right: 0;
 			}
 		}
 	}
+	.welcome{
+		p{
+			span{
+				display: block;
+				padding-top: 10px;
+			}
+		}
+	}
+
 }
 @media screen and (max-width: 673px){
 	.title{
 		line-height: 150%;
 	}
+	.block{
+		padding-bottom: 10%;
+	}
+	.header{
+		padding-bottom: 5px;
+	}
 	.welcome{
 		padding: 100px 0 200px;
 	}
 	.about{
-		padding: 50px 0 50px;
 		.content{
 			display: flex;
 			flex-direction: column-reverse;
@@ -455,29 +471,18 @@ main{
 			}
 		}
 	}
-	.team{
-		padding: 10% 0 ;
-	}
-	.services{
-		padding: 10% 0 ;
-	}
-	.clients{
-		padding: 10% 0 ;
-	}
 	.portfolio{
-		padding: 10% 0 ;
 		.noname-text{
 			padding-top: 20px;
 		}
 		.items{
 			padding-top: 20px;
-			:nth-child(even){
-				display: none;
-			}
+			// :nth-child(even){
+			// 	display: none;
+			// }
 		}
 	}
 	.testim{
-		padding: 10% 0 ;
 		.quote{
 			padding-top: 30px;
 		}
@@ -486,12 +491,17 @@ main{
 		}
 	}
 	.contact{
-		padding: 10% 0 ;
 		.content{
 			.noname-text{
 				margin-top: 30px;
 			}
 			form{
+				.flex{
+					flex-direction: column;
+					div{
+						width: 100%;
+					}
+				}
 				padding-top: 30px;
 			}
 		}
