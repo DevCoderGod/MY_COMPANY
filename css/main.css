@@ -89,7 +89,7 @@ body {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .block-black {
@@ -213,7 +213,7 @@ body {
 
 .header {
   position: fixed;
-  background: black;
+  top: 0px;
   padding: 52px 0 5px 0;
   color: #fff;
 }
@@ -260,7 +260,7 @@ body {
   border-bottom: 3px solid #fcac45;
 }
 
-.header__topnav .topnav__burger {
+.header__burger {
   display: none;
 }
 
@@ -287,10 +287,6 @@ main {
 .welcome .content h1 .mycompany {
   font-weight: 700;
   color: #fcac45;
-}
-
-.welcome .content span {
-  font-weight: 300;
 }
 
 .about {
@@ -400,7 +396,7 @@ main {
 }
 
 .clients {
-  padding: 93px 13% 160px;
+  padding: 93px 0 160px;
 }
 
 .clients .logos {
@@ -445,7 +441,11 @@ main {
 }
 
 .portfolio .items .work {
-  padding: 11px 11px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  min-width: 250px;
+  padding: 10px 10px;
 }
 
 .portfolio .items .work img {
@@ -601,38 +601,49 @@ main {
 }
 
 @media screen and (max-width: 799px) {
-  .header__topnav {
-    padding: 0;
+  .header {
+    overflow: visible;
   }
-  .header__topnav a {
+  .header__topnav {
     display: none;
   }
-  .header__topnav .topnav__burger {
+  .header__burger {
     display: block;
     font-size: 24px;
   }
   .header__topnav-responsive {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    width: 100%;
-    position: relative;
-    padding: 2px 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    left: 0;
+    top: 80px;
+    background-color: black;
+    opacity: 0.8;
+    padding-top: 30px;
+    font-size: 20px;
   }
   .header__topnav-responsive a {
-    display: block;
+    margin: 10px 0;
+    padding-bottom: 11px;
   }
   .header__topnav-responsive a:hover {
-    border-bottom: 3px solid #fcac45;
+    border-bottom: 0;
   }
-  .header__topnav-responsive .topnav__burger {
-    position: absolute;
+  .header__topnav-responsive__burger {
     top: 0;
     right: 0;
+  }
+  .welcome p span {
+    display: block;
+    padding-top: 10px;
   }
 }
 
@@ -640,11 +651,14 @@ main {
   .title {
     line-height: 150%;
   }
+  .block {
+    padding-bottom: 10%;
+  }
+  .header {
+    padding-bottom: 5px;
+  }
   .welcome {
     padding: 100px 0 200px;
-  }
-  .about {
-    padding: 50px 0 50px;
   }
   .about .content {
     display: -webkit-box;
@@ -662,29 +676,11 @@ main {
     text-align: center;
     padding: 0 7% 10% 7%;
   }
-  .team {
-    padding: 10% 0;
-  }
-  .services {
-    padding: 10% 0;
-  }
-  .clients {
-    padding: 10% 0;
-  }
-  .portfolio {
-    padding: 10% 0;
-  }
   .portfolio .noname-text {
     padding-top: 20px;
   }
   .portfolio .items {
     padding-top: 20px;
-  }
-  .portfolio .items :nth-child(even) {
-    display: none;
-  }
-  .testim {
-    padding: 10% 0;
   }
   .testim .quote {
     padding-top: 30px;
@@ -692,14 +688,20 @@ main {
   .testim .signature {
     padding-top: 15px;
   }
-  .contact {
-    padding: 10% 0;
-  }
   .contact .content .noname-text {
     margin-top: 30px;
   }
   .contact .content form {
     padding-top: 30px;
+  }
+  .contact .content form .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .content form .flex div {
+    width: 100%;
   }
 }
 
