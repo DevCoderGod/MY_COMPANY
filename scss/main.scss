@@ -9,8 +9,8 @@ body{
 .block{
 	width: 100%;
 	max-width: 1500px;
+	min-width: 320px;
 	margin: 0 auto;
-	overflow-x: hidden;
 	&-black{
 		background: black;
 		color: white;
@@ -107,6 +107,8 @@ body{
 .header{
 	position: fixed;
 	top: 0px;
+	left: 0;
+	right: 0;
 	padding: 52px 0 5px 0;
 	color: #fff;
 	.content{
@@ -139,6 +141,7 @@ body{
 		}
 	}
 	&__burger {
+		cursor: pointer;
 		display: none;
 	}
 }
@@ -155,6 +158,7 @@ main{
 		h1{
 			font-size: 44px;
 			margin-bottom: 15px;
+			text-transform: uppercase;
 			.mycompany{
 				font-weight: 700;
 				color: $YG;
@@ -206,6 +210,7 @@ main{
 				&::before{
 				content: url(../img/mark.png);
 				margin-right: 10px;
+				padding-top: 3px;
 				}
 			}
 		}
@@ -266,10 +271,9 @@ main{
 	.noname-text{
 		padding-top: 51px;
 	}
-	.items{
-		padding-top: 160px;
+	.items--portfolio{
+		margin-top: 160px;
 		flex-wrap: wrap;
-		max-width: 100%;
 		justify-content: center;
 		.work{
 			flex: 1 0 25%;
@@ -389,6 +393,12 @@ main{
 	}
 }
 @media screen and(max-width: 1036px){
+	.block{
+		padding-bottom: 10%;
+	}
+	.header{
+		padding-bottom: 5px;
+	}
 	.items{
 		.wrapper{
 			.item{
@@ -400,10 +410,16 @@ main{
 			}
 		}
 	}
+	.portfolio{
+		.items--portfolio{
+			margin-top: 60px;
+		}
+	}
 }
 @media screen and(max-width: 799px){
 	.header{
 		overflow: visible;
+		padding-top: 32px;
 		&__topnav{
 			display: none;
 		}
@@ -417,17 +433,15 @@ main{
 			flex-direction: column;
 			align-items: center;
 			left: 0;
-			top: 80px;
+			top: 70px;
 			background-color: black;
-			opacity: 0.8;
+			opacity: 0.9;
 			padding-top: 30px;
 			font-size: 20px;
 			a{
 				margin: 10px 0;
 				padding-bottom: 11px;
-				&:hover{
-					border-bottom: 0;
-				}
+				border-bottom: 3px solid transparent;
 			}
 			&__burger {
 				top: 0;
@@ -443,17 +457,10 @@ main{
 			}
 		}
 	}
-
 }
 @media screen and (max-width: 673px){
 	.title{
 		line-height: 150%;
-	}
-	.block{
-		padding-bottom: 10%;
-	}
-	.header{
-		padding-bottom: 5px;
 	}
 	.welcome{
 		padding: 100px 0 200px;
@@ -471,15 +478,20 @@ main{
 			}
 		}
 	}
+	.clients{
+		.logos{
+			padding-top: 50px;
+		}
+	}
 	.portfolio{
 		.noname-text{
 			padding-top: 20px;
 		}
-		.items{
+		.items--portfolio{
 			padding-top: 20px;
-			// :nth-child(even){
-			// 	display: none;
-			// }
+			:nth-child(even){
+				display: none;
+			}
 		}
 	}
 	.testim{

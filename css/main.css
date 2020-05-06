@@ -88,8 +88,8 @@ body {
 .block {
   width: 100%;
   max-width: 1500px;
+  min-width: 320px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 .block-black {
@@ -214,6 +214,8 @@ body {
 .header {
   position: fixed;
   top: 0px;
+  left: 0;
+  right: 0;
   padding: 52px 0 5px 0;
   color: #fff;
 }
@@ -261,6 +263,7 @@ body {
 }
 
 .header__burger {
+  cursor: pointer;
   display: none;
 }
 
@@ -282,6 +285,7 @@ main {
 .welcome .content h1 {
   font-size: 44px;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .welcome .content h1 .mycompany {
@@ -353,6 +357,7 @@ main {
 .about__right-text li::before {
   content: url(../img/mark.png);
   margin-right: 10px;
+  padding-top: 3px;
 }
 
 .team {
@@ -430,17 +435,16 @@ main {
   padding-top: 51px;
 }
 
-.portfolio .items {
-  padding-top: 160px;
+.portfolio .items--portfolio {
+  margin-top: 160px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.portfolio .items .work {
+.portfolio .items--portfolio .work {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
@@ -448,7 +452,7 @@ main {
   padding: 10px 10px;
 }
 
-.portfolio .items .work img {
+.portfolio .items--portfolio .work img {
   width: 100%;
 }
 
@@ -591,6 +595,12 @@ main {
 }
 
 @media screen and (max-width: 1036px) {
+  .block {
+    padding-bottom: 10%;
+  }
+  .header {
+    padding-bottom: 5px;
+  }
   .items .wrapper .item {
     margin-bottom: 50px;
   }
@@ -598,11 +608,15 @@ main {
     width: 80%;
     margin: 0 auto;
   }
+  .portfolio .items--portfolio {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 799px) {
   .header {
     overflow: visible;
+    padding-top: 32px;
   }
   .header__topnav {
     display: none;
@@ -624,18 +638,16 @@ main {
         -ms-flex-align: center;
             align-items: center;
     left: 0;
-    top: 80px;
+    top: 70px;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;
     padding-top: 30px;
     font-size: 20px;
   }
   .header__topnav-responsive a {
     margin: 10px 0;
     padding-bottom: 11px;
-  }
-  .header__topnav-responsive a:hover {
-    border-bottom: 0;
+    border-bottom: 3px solid transparent;
   }
   .header__topnav-responsive__burger {
     top: 0;
@@ -650,12 +662,6 @@ main {
 @media screen and (max-width: 673px) {
   .title {
     line-height: 150%;
-  }
-  .block {
-    padding-bottom: 10%;
-  }
-  .header {
-    padding-bottom: 5px;
   }
   .welcome {
     padding: 100px 0 200px;
@@ -676,11 +682,17 @@ main {
     text-align: center;
     padding: 0 7% 10% 7%;
   }
+  .clients .logos {
+    padding-top: 50px;
+  }
   .portfolio .noname-text {
     padding-top: 20px;
   }
-  .portfolio .items {
+  .portfolio .items--portfolio {
     padding-top: 20px;
+  }
+  .portfolio .items--portfolio :nth-child(even) {
+    display: none;
   }
   .testim .quote {
     padding-top: 30px;
