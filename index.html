@@ -11,23 +11,25 @@
 	<header class="block block-black header">
 		<div class="content">
 			<div class="header__logo"><p>mycompany</p></div>
-			<nav class="header__topnav" id="topnav">
-				<a href="#welcome" id="link">home</a>
-				<a href="#about">about</a>
-				<a href="#team">team</a>
-				<a href="#services">services</a>
-				<a href="#clients">clients</a>
-				<a href="#portfolio">portfolio</a>
-				<a href="#testim">testimonials</a>
-				<a href="#contact">contact</a>
-			</nav>
+			<div class="nav">
+				<nav class="header__topnav" id="topnav">
+					<a href="#welcome" id="link">home</a>
+					<a href="#about">about</a>
+					<a href="#team">team</a>
+					<a href="#services">services</a>
+					<a href="#clients">clients</a>
+					<a href="#portfolio">portfolio</a>
+					<a href="#testim">testimonials</a>
+					<a href="#contact">contact</a>
+				</nav>
+			</div>
 			<div class="header__burger" id="menu">&#9776;</div>
 		</div>
 	</header>
 	<main>
 		<section class="block block-black welcome" id="welcome">
 			<div class="content">
-				<h1>WELCOME ON <span class="mycompany">MYCOMPANY</span></h1>
+				<h1>welcome on <span class="mycompany">mycompany</span></h1>
 				<p><span class="text-lite">We are a digital agency with</span><span> years of experience </span><span class="text-lite">and with</span><span> extraordinary people</span></p>
 			</div>
 		</section>
@@ -53,7 +55,6 @@
 			<div class="content">
 				<h2 class="title">our team</h2>
 				<div class="items">
-					<div class="wrapper">
 						<div class="item">
 							<img src="img/des.jpg" alt="foto">
 							<h4 class="item__title">Vlad Ivanov</h4>
@@ -66,8 +67,6 @@
 							<p class="item__subtitle">Manager</p>
 							<p class="item__text">Do not seek to change what has come before. Seek to create that which has not</p>
 						</div>
-					</div>
-					<div class="wrapper">
 						<div class="item">
 							<img src="img/cop.jpg" alt="foto">
 							<h4 class="item__title">Pavel Konov</h4>
@@ -80,7 +79,6 @@
 							<p class="item__subtitle">SEO</p>
 							<p class="item__text">Do not seek to change what has come before. Seek to create that which has not</p>
 						</div>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -91,7 +89,6 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.</p>
 				</div>
 				<div class="items">
-					<div class="wrapper">
 						<div class="item">
 							<img src="img/web_des.svg" alt="icon">
 							<h4 class="item__title">Web design</h4>
@@ -104,8 +101,6 @@
 							<p class="item__subtitle">Manager</p>
 							<p class="item__text">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 						</div>
-					</div>
-					<div class="wrapper">
 						<div class="item">
 							<img src="img/photogr.svg" alt="icon">
 							<h4 class="item__title">PHOTOGRAPHY</h4>
@@ -118,7 +113,6 @@
 							<p class="item__subtitle">SEO</p>
 							<p class="item__text">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 						</div>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -140,7 +134,7 @@
 				<div class="noname-text">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus cum ab iusto assumenda velit excepturi porro ipsa tenetur.</p>
 				</div>
-				<div class="items">
+				<div class="items items--portfolio">
 					<div class="work"><img src="img/item4.png" alt="itms"></div>
 					<div class="work"><img src="img/item4.png" alt="itms"></div>
 					<div class="work"><img src="img/item4.png" alt="itms"></div>
@@ -184,7 +178,7 @@
 					</div>
 					<div class="message">
 						<p class="text-form">Message *</p>
-						<textarea name="message"></textarea>
+						<textarea name="message" maxlength="200"></textarea>
 					</div>
 					<div class="btn">
 						<button type="submit">Send</button>

@@ -85,11 +85,15 @@ body {
   margin: 0 auto;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .block {
   width: 100%;
   max-width: 1500px;
+  min-width: 320px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 .block-black {
@@ -155,50 +159,36 @@ body {
       justify-content: space-around;
 }
 
-.items .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-}
-
-.items .wrapper .item {
-  margin: 10px 0;
-  padding: 0 10px;
+.items .item {
+  padding: 10px 10px;
   overflow: hidden;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
   text-align: center;
   line-height: 24px;
   min-width: 250px;
 }
 
-.items .wrapper .item img {
+.items .item img {
   width: 48%;
   border-radius: 50%;
 }
 
-.items .wrapper .item__title {
+.items .item__title {
   margin-top: 17px;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 1px;
 }
 
-.items .wrapper .item__subtitle {
+.items .item__subtitle {
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 27px;
 }
 
-.items .wrapper .item__text {
+.items .item__text {
   font-size: 14px;
   font-weight: 100;
   letter-spacing: -0.5px;
@@ -214,6 +204,8 @@ body {
 .header {
   position: fixed;
   top: 0px;
+  left: 0;
+  right: 0;
   padding: 52px 0 5px 0;
   color: #fff;
 }
@@ -261,6 +253,7 @@ body {
 }
 
 .header__burger {
+  cursor: pointer;
   display: none;
 }
 
@@ -282,6 +275,7 @@ main {
 .welcome .content h1 {
   font-size: 44px;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .welcome .content h1 .mycompany {
@@ -353,6 +347,7 @@ main {
 .about__right-text li::before {
   content: url(../img/mark.png);
   margin-right: 10px;
+  padding-top: 3px;
 }
 
 .team {
@@ -430,17 +425,16 @@ main {
   padding-top: 51px;
 }
 
-.portfolio .items {
-  padding-top: 160px;
+.portfolio .items--portfolio {
+  margin-top: 160px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.portfolio .items .work {
+.portfolio .items--portfolio .work {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
@@ -448,7 +442,7 @@ main {
   padding: 10px 10px;
 }
 
-.portfolio .items .work img {
+.portfolio .items--portfolio .work img {
   width: 100%;
 }
 
@@ -518,6 +512,7 @@ main {
 
 .contact .content form .flex div input {
   border: solid 1px #999999;
+  padding-left: 10px;
   font-size: 20px;
   width: 100%;
   height: 42px;
@@ -529,8 +524,11 @@ main {
 
 .contact .content form .message textarea {
   border: solid 1px #999999;
+  font-size: 20px;
   width: 100%;
   height: 165px;
+  padding: 5px 10px;
+  resize: none;
 }
 
 .contact .content form .btn {
@@ -591,18 +589,39 @@ main {
 }
 
 @media screen and (max-width: 1036px) {
-  .items .wrapper .item {
+  .block {
+    padding-bottom: 10%;
+  }
+  .header {
+    padding-bottom: 5px;
+  }
+  .items .item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
     margin-bottom: 50px;
   }
-  .items .wrapper .item__text {
+  .items .item__text {
     width: 80%;
     margin: 0 auto;
+  }
+  .portfolio .items--portfolio {
+    margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 799px) {
   .header {
     overflow: visible;
+    padding-top: 32px;
+  }
+  .header .nav {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    height: 75vh;
+    width: 100%;
+    overflow-y: auto;
   }
   .header__topnav {
     display: none;
@@ -612,7 +631,6 @@ main {
     font-size: 24px;
   }
   .header__topnav-responsive {
-    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -623,19 +641,17 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    left: 0;
-    top: 80px;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;
     padding-top: 30px;
     font-size: 20px;
   }
   .header__topnav-responsive a {
-    margin: 10px 0;
-    padding-bottom: 11px;
-  }
-  .header__topnav-responsive a:hover {
-    border-bottom: 0;
+    display: block;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
   }
   .header__topnav-responsive__burger {
     top: 0;
@@ -650,12 +666,6 @@ main {
 @media screen and (max-width: 673px) {
   .title {
     line-height: 150%;
-  }
-  .block {
-    padding-bottom: 10%;
-  }
-  .header {
-    padding-bottom: 5px;
   }
   .welcome {
     padding: 100px 0 200px;
@@ -676,11 +686,17 @@ main {
     text-align: center;
     padding: 0 7% 10% 7%;
   }
+  .clients .logos {
+    padding-top: 50px;
+  }
   .portfolio .noname-text {
     padding-top: 20px;
   }
-  .portfolio .items {
+  .portfolio .items--portfolio {
     padding-top: 20px;
+  }
+  .portfolio .items--portfolio :nth-child(even) {
+    display: none;
   }
   .testim .quote {
     padding-top: 30px;
