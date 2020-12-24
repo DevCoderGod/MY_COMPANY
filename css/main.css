@@ -205,11 +205,8 @@ body {
   top: 0px;
   left: 0;
   right: 0;
-  padding: 52px 0 5px 0;
+  padding: 30px 20px 10px 20px;
   color: #fff;
-}
-
-.header .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,12 +216,15 @@ body {
 }
 
 .header__logo {
-  padding-bottom: 11px;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.header__logo a {
+  color: #fff;
 }
 
 .header__nav .list {
@@ -242,7 +242,7 @@ body {
 }
 
 .header__nav .list__item {
-  margin-left: 2%;
+  margin-left: 15px;
   color: inherit;
   cursor: pointer;
 }
@@ -266,6 +266,7 @@ main {
 
 .welcome {
   padding: 196px 0 421px;
+  height: 100vh;
 }
 
 .welcome .content {
@@ -589,6 +590,10 @@ main {
   .about__right-text li {
     margin-bottom: 20px;
   }
+  .header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 1036px) {
@@ -596,6 +601,7 @@ main {
     padding-bottom: 10%;
   }
   .header {
+    padding-top: 10px;
     padding-bottom: 5px;
   }
   .items .item {
@@ -613,10 +619,9 @@ main {
   }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 850px) {
   .header {
     overflow: visible;
-    padding-top: 32px;
   }
   .header__nav {
     display: none;
@@ -672,6 +677,15 @@ main {
     display: block;
     font-size: 24px;
   }
+  .welcome {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .welcome {
+    padding-top: 100px;
+  }
   .welcome p span {
     display: block;
     padding-top: 10px;
@@ -679,11 +693,14 @@ main {
 }
 
 @media screen and (max-width: 673px) {
+  .block {
+    padding-top: 40px;
+  }
+  .header {
+    padding-top: 5px;
+  }
   .title {
     line-height: 150%;
-  }
-  .welcome {
-    padding: 100px 0 200px;
   }
   .about .content {
     display: -webkit-box;
